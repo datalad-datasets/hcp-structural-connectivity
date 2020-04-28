@@ -1,11 +1,47 @@
-# Get data from the Human Connectome Project Open Access dataset with DataLad
+# Get data from a subset (structural connectivity data) from the Human Connectome Project Open Access dataset with DataLad
 
 [![made-with-datalad](https://www.datalad.org/badges/made_with.svg)](https://datalad.org)
 
-This dataset enables data retrieval with DataLad (0.12.2 or later) from the
-[HCP Open Access dataset](https://registry.opendata.aws/hcp-openaccess/) for users
-that accepted the WU-Minn HCP Consortium Open Access Data Use Terms and obtained
-valid AWS credentials via [db.humanconnectome.org](http://db.humanconnectome.org).
+This dataset enables data retrieval for a **subset** of the [HCP Open Access
+dataset](https://registry.opendata.aws/hcp-openaccess/) for users that accepted
+the WU-Minn HCP Consortium Open Access Data Use Terms and obtained valid AWS
+credentials via [db.humanconnectome.org](http://db.humanconnectome.org).
+
+## Structural connectivity data subset
+
+**Important**: For a DataLad dataset of the *full* HCP Open Access dataset,
+please go to
+[github.com/datalad-datasets/human-conntectome-project-openaccess](https://github.com/datalad-datasets/human-connectome-project-openaccess).
+
+This subset comprises the diffusion images and T1 raw images of each subject in
+the HCP Open Access dataset. Specifically, these files are
+
+```
+- <sub>/T1w/Diffusion/nodif_brain_mask.nii.gz
+- <sub>/T1w/Diffusion/bvecs
+- <sub>/T1w/Diffusion/bvals
+- <sub>/T1w/Diffusion/data.nii.gz
+- <sub>/T1w/Diffusion/grad_dev.nii.gz
+- <sub>/unprocessed/3T/T1w_MPR1/*_3T_BIAS_32CH.nii.gz
+- <sub>/unprocessed/3T/T1w_MPR1/*_3T_AFI.nii.gz
+- <sub>/unprocessed/3T/T1w_MPR1/*_3T_BIAS_BC.nii.gz
+- <sub>/unprocessed/3T/T1w_MPR1/*_3T_FieldMap_Magnitude.nii.gz
+- <sub>/unprocessed/3T/T1w_MPR1/*_3T_FieldMap_Phase.nii.gz
+- <sub>/unprocessed/3T/T1w_MPR1/*_3T_T1w_MPR1.nii.gz
+
+```
+
+The directory structure and the file names in this subset are kept identical to
+the full HCP dataset.
+
+The purpose of this dataset as to be a *single* dataset resource with all data
+relevant for, e.g. structural-connectivity-like analyses. Compared to the
+[full HCP open access DataLad dataset](https://github.com/datalad-datasets/human-connectome-project-openaccess),
+due to its reduced number of files and mono-repo structure, this dataset is
+much faster to ``clone``. If only the files included in this subset are of
+relevance to you, using this repository is a more efficient alternative to the
+full HCP dataset.
+
 
 ## Human Connectome Project
 
@@ -22,7 +58,7 @@ and MEG data and 7T MR data for a subset of subjects (twin pairs).
 
 ## Data access and retrieval with DataLad
 
-To retrieve HCP Open Access data via DataLad with this dataset, you need to agree
+To retrieve HCP Open Access data included in this dataset via DataLad, you need to agree
 to the [WU-Minn HCP Consortium Open Access Data Use Terms](./DATA_USE_AGREEMENT.md)
 and obtain valid AWS credentials:
 
@@ -42,12 +78,8 @@ will retrieve data without asking them again.
 
 ## Dataset structure
 
-Each ``HCP1200/`` subject directory in this dataset is a DataLad subdataset. The
-command `datalad get -n <subject-id>` clones this subdataset and allows to
-access this subjects release notes (subdirectory `release-notes`). Within each
-subject's subdataset, one DataLad subdataset exists for each additional
-available subdirectory (e.g., ``MEG``, ``T1w``, etc., as far as available
-for the particular subject).
+Unlike the [full HCP open access DataLad dataset](https://github.com/datalad-datasets/human-connectome-project-openaccess),
+this repository is a single dataset without any subdatasets.
 
 If you have never used [DataLad](https://www.datalad.org/) before, please read the
 section on DataLad datasets below.
@@ -71,10 +103,8 @@ A DataLad dataset can be `cloned` by running
 datalad clone <url>
 ```
 Once a dataset is cloned, it is a light-weight directory on your local machine.
-At
-this point,
-it contains only small metadata and information on the identity of the files in the dataset,
-but not actual *content* of the (sometimes large) data files.
+At this point, it contains only small metadata and information on the identity of
+the files in the dataset, but not actual *content* of the (sometimes large) data files.
 
 ### Retrieve dataset content
 
