@@ -34,6 +34,7 @@ the HCP Open Access dataset. Specifically, these files are
 The directory structure and the file names in this subset are kept identical to
 the full HCP dataset.
 
+Where available, 7T diffusion data is included as well.
 The purpose of this dataset as to be a *single* dataset resource with all data
 relevant for, e.g. structural-connectivity-like analyses. Compared to the
 [full HCP open access DataLad dataset](https://github.com/datalad-datasets/human-connectome-project-openaccess),
