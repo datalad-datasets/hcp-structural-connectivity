@@ -1,5 +1,6 @@
 1645703335.568834396s 1 :s3://hcp-openaccess/HCP_1200/298455/unprocessed/3T/T1w_MPR1/298455_3T_AFI.nii.gz
 1588067741.066276755s 1 :s3://hcp-openaccess/HCP_1200/298455/unprocessed/3T/T1w_MPR1/298455_3T_AFI.nii.gz?versionId=R.daJpJAdW9Bi8APtbpXAssarWsByLT3
+1645703336.549019548s 1 :s3://hcp-openaccess/HCP_1200/298455/unprocessed/3T/T1w_MPR2/298455_3T_AFI.nii.gz
 1588067741.487427589s 1 :s3://hcp-openaccess/HCP_1200/298455/unprocessed/3T/T1w_MPR2/298455_3T_AFI.nii.gz?versionId=BKPlPbdLXKWZFa9VlVuIijbtgwEmpA0a
 1588067741.921899063s 1 :s3://hcp-openaccess/HCP_1200/298455/unprocessed/3T/T2w_SPC1/298455_3T_AFI.nii.gz?versionId=mpfisvSGwQb5RUXh0AtBFietkewwi7O9
 1588067742.358035425s 1 :s3://hcp-openaccess/HCP_1200/298455/unprocessed/3T/T2w_SPC2/298455_3T_AFI.nii.gz?versionId=qAM73rfUk2UoyqshlT9GyzapFwbTzRsM
